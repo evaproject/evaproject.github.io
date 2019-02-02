@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Loop 1 - Step 1</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div class="mainBox">
+    <div class="container">
+      <div class="box" onclick="modal('Mobile')">
+        <div class="image">
+          <img id="imgMobile" src="./img/device.svg" alt="MOBILE">
+        </div>
+        <h2 id="labelMobile">MOBILE</h2>
+        <p class="info" id="infoMobile">
+          <strong>
+            Get notification about new releases
+            in our mobile app.
+          </strong>
+        </p>
+        <p class="prise" id="priseMobile">
+          <sup>$</sup>10<sub> / month</sub>
+        </p>
+      </div>
+      <div class="box" onclick="modal('Desktop')">
+        <div class="image">
+          <img id="imgDesktop" src="./img/laptop.svg" alt="DESKTOP">
+        </div>
+        <h2 id="labelDesktop">DESKTOP</h2>
+        <p class="info" id="infoDesktop">
+          <strong>
+            Enjoy new episodes on your laptop in
+            browser with our web servise, which
+            supports all the platforms.
+          </strong>
+        </p>
+        <p class="prise" id="priseDesktop">
+          <sup>$</sup>15<sub> / month</sub>
+        </p>
+      </div>
+      <div class="box" onclick="modal('Tv')">
+        <div class="image">
+          <img id="imgTv" src="./img/monitor.svg" alt="TV">
+        </div>
+        <h2 id="labelTv">TV</h2>
+        <p class="info" id="infoTv">
+          <strong>
+            Watch your favorite series at home
+            on large screen with our TV
+            application.
+          </strong>
+        </p>
+        <p class="prise" id="priseTv">
+          <sup>$</sup>20<sub> / month</sub>
+        </p>
+      </div>
+    </div>
+    <div class="containerButton">
+      <button type="button" class="mainButton">Give feedback</button>
+    </div>
+  </div>
+
+
+
+  <div class="modalBox" id="modalBox">
+    <div id="myModal" class="mainBox modal">
+      <div class="modalContent">
+        <span class="modalClose" data-close="true" title="Close">
+          <img src="./img/cross.svg" alt="Close">
+        </span>
+        <div class="modalHeader">
+          Confirmation
+        </div>
+        <div class="image">
+          <img class="modalImg" id="img" src="modalImg" alt="">
+        </div>
+        <h2 class="modalLabel" id="label">modalLabel</h2>
+        <p class="modalBody info" id="info"></p>
+        <p class="modalFooter prise" id="prise"></p>
+        <div class="containerButton">
+          <button type="button" class="mainButton">Confirm and pay</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!--
+    Welcome to your first asset!
+
+    You could've noticed there is a link to Roboto font in the head.
+    You can use it in css by typing font-family: Roboto, sans-serif;
+    and you can customize it by using font-weight (400, 500 etc. - numbers in the link tag)
+
+    Good luck and have fun!
+  -->
+
+  <script src="./main.js"></script>
+</body>
+
+</html>
