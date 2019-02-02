@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+
+<script src="jq.js"></script>
+<script src="moment.js"></script>
+
+<style>
+    body {
+        /* background-image: linear-gradient(to bottom right, #623782, #261229); */
+        background: whitesmoke;
+        color: black;
+        font-family: 'Lato', sans-serif;
+        margin-top: 30px;
+        min-height: calc(100vh - 38px);
+    }
+
+    .menuDiv {
+        background: rgb(61, 61, 61);
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        box-shadow: 0px 5px 5px rgba(61, 61, 61, 0.5);
+    }
+    .menu div{
+        display: inline-block;
+    }
+    .menu {       
+        position: relative;
+        left: 20%;
+        border: none;
+        width: 80%;
+        /* height: 20px; */
+        /* text-align: right; */
+        background-color: rgb(133, 133, 133);
+
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+
+    .menu .logOff { 
+        /* display: none;        */
+        border: none;
+        /* padding: 20px; */
+        /* margin: 20px; */
+        color: black;
+        font-family: 'Lato', sans-serif;
+        position: absolute;
+        right: 0%;
+        /* top:     25%; */
+        /* padding-top: 10px; */
+        /* padding-bottom: 10px; */
+    }
+    .menu .logOff button{
+        border: none;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        width: 60px;
+        height: 38px;
+        padding-top: 10px; 
+        padding-bottom: 10px;
+    }
+    .menu .addToDo{
+        /* display: none; */
+        position: relative;
+        left: 20px;
+        padding: 10px;
+        /* margin: 20px; */
+    }
+
+    .menu .addToDo input{
+        border: none;
+        background-color: rgb(133, 133, 133);
+        color: white;
+        width: 600px;
+        height: auto;
+        
+    }
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: white;
+        opacity: 1; /* Firefox */
+    }
+
+    .example {
+        display: none;
+    }
+
+    .notes {
+        margin: 0 auto;
+        margin-top: 80px;
+        /* border: 3px dashed #0e197a; */
+        padding: 20px;
+        width: 600px;
+    }
+
+    .note {
+        margin-bottom: 20px;
+        border: 1px solid rgba(61, 61, 61, 0.55);
+        border-radius: 5px;
+        /* margin-top: 20px; */
+        padding: 10px;
+    }
+
+    .note:hover {
+        transition: 150ms;
+        box-shadow: 5px 5px 5px rgba(61, 61, 61, 0.5);
+    }
+
+    .note .createdAt {
+        text-align: right;
+        opacity: 0.6;
+    }
+</style>
+<!-- 
+<style>
+    .menu div{
+        display: inline-block;
+    }
+    .logOff{
+        position: absolute;
+        right: 0;
+    }
+</style> -->
+
+<body>
+    <div class="menuDiv">
+        <div class="menu">
+            <div class="addToDo">
+                <input type="text" id="newToDo" class="AddToDoInput" placeholder="Новая заметка...">
+            </div>
+            <div class="logOff">
+                <button class="logOffButton">Log off</button>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <!-- <input type="datetime-local" name="" id=""> -->
+
+        <div class='notes'>
+            <div class='note example'>
+                <div class='text'></div>
+                <div class="createdAt"></div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    $('.logOffButton').click(function () {
+        document.location.href = "/logoff";
+    });
+
+    $.get("/api/getNotes").done(function (data) {
+
+        console.log(data)
+
+        for (var note of data) {
+            var this_note = $('.notes .note.example').clone().appendTo(".notes").removeClass("example");
+            this_note.find('.text').html(note.text);
+            this_note.find('.createdAt').html(moment(note.createdAt).format("DD.MM.YYYY HH:mm"));
+        }
+
+
+    }).fail(function () {
+        alert("произошла ошибка")
+    })
+</script>

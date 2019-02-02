@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>login</title>
+<style>
+
+    body{
+background: black;
+}
+
+div{
+    background: white;
+
+    width: 300px;
+    margin: 0 auto;
+
+    padding: 20px;
+
+    margin-top: 50px;
+
+    border-radius: 4px;
+
+    opacity: 1;
+    animation: opacity 1s linear;
+}
+@keyframes opacity {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+input{
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+}
+
+h1{
+    text-align: center;
+    margin: 0;
+    margin-bottom: 25px;
+    cursor: default;
+}
+
+h3{
+    text-align: center;
+    margin: 0;
+    cursor: default; 
+}
+
+.registration {
+    margin-top: 5px;
+}
+
+.registrationError{
+    margin-top: 5px;
+    color: red;
+}
+
+.registrationSuccess{
+    margin-top: 5px;
+    color: rgb(0, 255, 119);
+}
+
+.hidden{
+    display: none;
+}
+
+button {
+  display: inline-block;
+  font-family: arial,sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(68,68,68);
+  text-decoration: none;
+  user-select: none;
+  padding: .4em 1.2em;
+  outline: none;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 2px;
+  background: rgb(245,245,245) linear-gradient(#f4f4f4, #f1f1f1);
+  transition: all .218s ease 0s;
+}
+button:hover {
+  color: rgb(24,24,24);
+  border: 1px solid rgb(198,198,198);
+  background: #f7f7f7 linear-gradient(#f7f7f7, #f1f1f1);
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+button:active {
+  color: rgb(51,51,51);
+  border: 1px solid rgb(204,204,204);
+  background: rgb(238,238,238) linear-gradient(rgb(238,238,238), rgb(224,224,224));
+  box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;
+}
+.submit {
+    background: rgb(0, 255, 119);
+}
+.submit:hover {
+    background: rgb(0, 236, 110);
+}
+</style>
+
+<script src="jq.js"></script>
+
+<div class="container">
+    <h1>Sign in to WebNotes</h1>
+    <input type="email" id="login" class="login" name="" id="" placeholder="email" value="admin@admin.com">
+    <input type="password" id="password" class="password" name="" id="" placeholder="password" value="123">
+    <button class="submit">Sign in</button>
+    <button class="reg">Sign up</button>
+
+</div>
+<div class="registration hidden">
+    <h1>Join WebNotes</h1>
+    <input type="text" id="regName" class="regName" name="" id="" placeholder="name">
+    <input type="email" id="regLogin" class="regLogin" name="" id="" placeholder="email" onchange="parseLogin()">
+    <input type="password" id="regPassword" class="regPassword" name="" id="" placeholder="password">
+    <input type="password" id="regPassword2" class="regPassword2" name="" id="" placeholder="repeat password">
+    <button class="createAcc">Create an account</button>
+</div>
+
+<div class="registrationError login hidden">
+    <h3>login error</h3>
+</div>
+<div class="registrationError password hidden">
+    <h3>password error</h3>
+</div>
+<div class="registrationSuccess hidden">
+    <h3>success ;)</h3>
+</div>
+
+
+<script>
+    var loginExist = false;
+
+    var url = new URL(document.location.href);
+    var chat_id = url.searchParams.get("chat_id");
+    chat_id = chat_id == null ? undefined : chat_id;
+
+
+    $('.submit').click(function () {
+        $.post("/api/login", { login: $('.login').val(), password: $('.password').val(), chat_id }).done(function (data) {
+            if (chat_id) {
+                document.location.href = "tg://resolve?domain=webnotes_bot";
+            } else {
+                document.location.href = "/";
+            }
+        }).fail(function (e) {
+            alert("Ошибка!")
+            console.log("oshibka:", e.responseText)
+        });
+    });
+
+    $('.reg').click(function () {
+        // var this_note = $('.notes .note.example').clone().appendTo(".notes").removeClass("example");
+        $('.registration.hidden').removeClass("hidden");
+    });
+
+    function parseLogin() {
+        // можно сделать проверку логина не по кнопке
+        $.post("/api/parseLogin", { regLogin: $('.regLogin').val() }).done(function (data) {
+            loginExist = data;
+            if (loginExist) {
+                $('.registrationError.login.hidden').removeClass("hidden");
+            } else
+                $('.registrationError.login').addClass("hidden");
+        });
+
+        // $.get("/api/createAcc".done(function (data) {
+        //     alert(data);
+        // }));
+    };
+
+    $('.createAcc').click(function () {
+        if ($('.regPassword').val() != $('.regPassword2').val()) {
+            $('.registrationError.password.hidden').removeClass("hidden");
+        } else {
+            $('.registrationError.password').addClass("hidden");
+            if (!loginExist) {
+                $.post("/api/createAcc", { name: $('.regName').val(), login: $('.regLogin').val(), password: $('.regPassword').val() }).done(function () {
+                    $('.login').val($('.regLogin').val());
+                    $('.password').val("");
+
+                    $('.regName').val("");
+                    $('.regLogin').val("");
+                    $('.regPassword').val("");
+                    $('.regPassword2').val("");
+                    $('.registration').addClass("hidden");
+                    $('.registrationSuccess.hidden').removeClass("hidden");
+                });
+            }
+        }
+
+
+        // if ($('.regPassword').val() != $('.regPassword2').val()) {
+        //     $('.registrationError.password.hidden').removeClass("hidden");
+        // } else
+        //     $('.registrationError.password').addClass("hidden");
+
+
+
+        // $.post("/api/createAcc", { test: "test" });
+        // $.get("/api/createAcc".done(function (data) {
+        //     alert(data);
+        // }));
+
+    });
+
+</script>
