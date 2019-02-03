@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./styles.css" />
 </head>
 
-<body>
+<body id="body">
   <div class="mainBox">
     <div class="container">
       <div class="box" onclick="modal('Mobile')">
@@ -62,12 +62,12 @@
       </div>
     </div>
     <div class="containerButton">
-      <button type="button" class="mainButton">Give feedback</button>
+      <form action="http://t.me/efremovva" target="_blank">
+        <button type="submit" class="mainButton">Give feedback</button>
+      </form>
     </div>
   </div>
-
-
-
+  <!-- Модальное окно -->
   <div class="modalBox" id="modalBox">
     <div id="myModal" class="mainBox modal">
       <div class="modalContent">
@@ -86,20 +86,9 @@
         <div class="containerButton">
           <button type="button" class="mainButton">Confirm and pay</button>
         </div>
-
       </div>
     </div>
   </div>
-  <!--
-    Welcome to your first asset!
-
-    You could've noticed there is a link to Roboto font in the head.
-    You can use it in css by typing font-family: Roboto, sans-serif;
-    and you can customize it by using font-weight (400, 500 etc. - numbers in the link tag)
-
-    Good luck and have fun!
-  -->
-
   <script src="./main.js"></script>
 </body>
 
