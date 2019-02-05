@@ -11,9 +11,9 @@
 </head>
 
 <body id="body">
-  <div class="mainBox">
+  <main class="mainBox">
     <div class="container">
-      <div class="box" onclick="modal('Mobile')">
+      <section class="box" onclick="modal('Mobile')">
         <div class="image">
           <img id="imgMobile" src="./img/device.svg" alt="MOBILE">
         </div>
@@ -27,8 +27,8 @@
         <p class="prise" id="priseMobile">
           <sup>$</sup>10<sub> / month</sub>
         </p>
-      </div>
-      <div class="box" onclick="modal('Desktop')">
+      </section>
+      <section class="box" onclick="modal('Desktop')">
         <div class="image">
           <img id="imgDesktop" src="./img/laptop.svg" alt="DESKTOP">
         </div>
@@ -43,8 +43,8 @@
         <p class="prise" id="priseDesktop">
           <sup>$</sup>15<sub> / month</sub>
         </p>
-      </div>
-      <div class="box" onclick="modal('Tv')">
+      </section>
+      <section class="box" onclick="modal('Tv')">
         <div class="image">
           <img id="imgTv" src="./img/monitor.svg" alt="TV">
         </div>
@@ -59,36 +59,37 @@
         <p class="prise" id="priseTv">
           <sup>$</sup>20<sub> / month</sub>
         </p>
-      </div>
+      </section>
     </div>
     <div class="containerButton">
-      <form action="https://t.me/efremovva" target="_blank">
+      <form action="http://t.me/efremovva" target="_blank">
         <button type="submit" class="mainButton">Give feedback</button>
       </form>
     </div>
-  </div>
-  <!-- Модальное окно -->
-  <div class="modalBox" id="modalBox">
-    <div id="myModal" class="mainBox modal">
-      <div class="modalContent">
-        <span class="modalClose" data-close="true" title="Close">
-          <img src="./img/cross.svg" alt="Close">
-        </span>
-        <div class="modalHeader">
-          Confirmation
-        </div>
-        <div class="image">
-          <img class="modalImg" id="img" src="./img/device.svg" alt="">
-        </div>
-        <h2 class="modalLabel" id="label">modalLabel</h2>
-        <p class="modalBody info" id="info"></p>
-        <p class="modalFooter prise" id="prise"></p>
-        <div class="containerButton">
-          <button type="button" class="mainButton">Confirm and pay</button>
-        </div>
+
+    <!-- Модальное окно -->
+    <div class="modalBox" id="modalBox">
+      <div id="myModal" class="mainBox modal">
+        <section class="modalContent">
+          <span class="modalClose" data-close="true" title="Close">
+            <img src="./img/cross.svg" alt="Close">
+          </span>
+          <div class="modalHeader">
+            Confirmation
+          </div>
+          <div class="image">
+            <img class="modalImg" id="img" src="modalImg" alt="">
+          </div>
+          <h2 class="modalLabel" id="label">modalLabel</h2>
+          <p class="modalBody info" id="info"></p>
+          <p class="modalFooter prise" id="prise"></p>
+          <div class="containerButton">
+            <button type="button" class="mainButton">Confirm and pay</button>
+          </div>
+        </section>
       </div>
     </div>
-  </div>
+  </main>
   <script src="./main.js"></script>
 </body>
 
