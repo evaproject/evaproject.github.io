@@ -3,7 +3,7 @@
 https://github.com/evaproject/evaproject.github.io/tree/master/bezier
 #### Запустить можно тут 👇
 https://evaproject.github.io/bezier
-<hr>
+<hr/>
 ### Модальное окно, адаптив
 #### Репозиторий
 https://github.com/evaproject/evaproject.github.io/tree/master/modal
