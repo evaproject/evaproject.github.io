@@ -1,22 +1,18 @@
 ### Реализация кривой Безье
-#### Репозиторий
-https://github.com/evaproject/evaproject.github.io/tree/master/bezier
-#### Запустить можно тут 👇
-https://evaproject.github.io/bezier
+<a href="https://github.com/evaproject/evaproject.github.io/tree/master/bezier"> 📄 Репозиторий </a>
+<br/>
+<a href="https://evaproject.github.io/bezier"> 🕹 Запустить </a>
 
 ### Модальное окно, адаптив
-#### Репозиторий
-https://github.com/evaproject/evaproject.github.io/tree/master/modal
-#### Запустить можно тут 👇
-https://evaproject.github.io/modal
+<a href="https://github.com/evaproject/evaproject.github.io/tree/master/modal"> 📄 Репозиторий </a>
+<br/>
+<a href="https://evaproject.github.io/modal"> 🕹 Запустить </a>
 
 ### Небольшой пример работы с графиками на Charts.js
-#### Репозиторий
-https://github.com/evaproject/evaproject.github.io/tree/master/NOVA
-#### Запустить можно тут 👇
-https://evaproject.github.io/NOVA/
+<a href="https://github.com/evaproject/evaproject.github.io/tree/master/NOVA"> 📄 Репозиторий </a>
+<br/>
+<a href="https://evaproject.github.io/NOVA/">  🕹 Запустить </a>
 
 ### WebNotes
-#### Репозиторий
-https://github.com/evaproject/evaproject.github.io/tree/master/webNotes
+<a href="https://github.com/evaproject/evaproject.github.io/tree/master/webNotes"> 📄 Репозиторий </a>
 
