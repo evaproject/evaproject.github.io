@@ -1,4 +1,3 @@
- Тут можно посмотреть на мой код и некоторые задания, с которыми я сталкивался
 ### Реализация кривой Безье
 #### Репозиторий
 https://github.com/evaproject/evaproject.github.io/tree/master/bezier
