@@ -7,23 +7,17 @@ $('a[href^="#"]').on('click',function (e) {
     $('body,html').animate({
         scrollTop: top
     }, 800);
-
-
 });
 
 function setFocus(){
     setTimeout( () => document.getElementById("inputName").focus(), 1000);
 }
 
-// window.onresize = function () {forRotate()}
-
 $(document).ready(function () {
 
     forRotate()
     $(window).resize( () => forRotate() );
     function forRotate() {
-        console.log('1')
-
         if ($('body').innerWidth() < 768 )
             $('.rotate-md').removeClass('rotate')
         else if ( !$('.rotate-md')[0].classList.contains('rotate') )
