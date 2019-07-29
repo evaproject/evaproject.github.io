@@ -225,7 +225,18 @@
             </div>
         </div>
     </section>
-
+    <section class="container-fluid box-8">
+        <div class="row">
+            <div class="col-12 col-md-3 p-0 video-grid" id="v1"></div>
+            <div class="col-12 col-md-3 p-0 video-grid" id="v2"></div>
+            <div class="col-12 col-md-3 p-0 video-grid" id="v3"></div>
+            <div class="col-12 col-md-3 p-0 video-grid" id="v4"></div>
+            <div class="col-12 col-md-3 p-0 video-grid" id="v5"></div>
+            <div class="col-12 col-md-3 p-0 video-grid" id="v6"></div>
+            <div class="col-12 col-md-3 p-0 video-grid" id="v7"></div>
+            <div class="col-12 col-md-3 p-0 video-grid" id="v8"></div>
+        </div>
+    </section>
 
 <!--    <section class="container-fluid box-8">-->
 <!--        <div class="row">-->
@@ -340,6 +351,7 @@
         </div>
     </section>
     <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="main.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/swiper.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
@@ -355,22 +367,22 @@
         }, 2500);
         });
 
-        box4()
+        box4();
 
         window.onresize = function(event) {
-            box4()
+            box4();
         };
 
         function box4() {
             if($(window).width() < 768) {
-                console.log('<768')
-                $(".box-4-wrapper-left").css("height", '50%')
-                $(".box-4-wrapper-right").css("height", '50%')
+                console.log('<768');
+                $(".box-4-wrapper-left").css("height", '50%');
+                $(".box-4-wrapper-right").css("height", '50%');
             } else {
-                $(".box-4-wrapper-left").css("height", '100%')
-                $(".box-4-wrapper-right").css("height", '100%')
-            }
-        }
+                $(".box-4-wrapper-left").css("height", '100%');
+                $(".box-4-wrapper-right").css("height", '100%');
+            };
+        };
 
     </script>
 </body>
