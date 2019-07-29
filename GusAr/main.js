@@ -1,18 +1,19 @@
 
 let videoIds = ['fnJ8sZFkuMw',
-    'PdB9KfmX50Y',
-    't9APohDmtKM',
-    '0CglYoXywT8',
-    'LRK8Sf4HgEE',
-    'YKN-sbW4Y8Q',
-    'iuKpT40jZhM',
-    'Oz9quIeg6Uk'];
+                'PdB9KfmX50Y',
+                't9APohDmtKM',
+                '0CglYoXywT8',
+                'LRK8Sf4HgEE',
+                'YKN-sbW4Y8Q',
+                'iuKpT40jZhM',
+                'Oz9quIeg6Uk'];
 let videoPlaceId = ['v1','v2','v3','v4','v5','v6','v7','v8'];
 let $elem = $('.video-grid');
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
 function checkPosition($e,p){
 //функция проверки видимости элемента на jquery
 //     $e = jQuery($e);
@@ -55,6 +56,9 @@ $(document).ready(function(){
         }
     });
 });
+
+onYouTubeIframeAPIReady()
+
 let player = [];
 function onYouTubeIframeAPIReady() {
 //рисуем видеопроигрыватель Youtube

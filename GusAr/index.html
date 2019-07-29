@@ -45,9 +45,11 @@
 
     <section class="container-fluid box-3 pb-4">
         <div class="bg-wrapper">
+
             <video loop="loop" preload="auto" muted width="100%" height="auto" class="bg-video wow fadeIn" data-wow-delay="2.5s">
                 <source class="h-100" src="assets/video/bg-video.mp4">
             </video>
+
         </div>
 
         <div class="container">
@@ -368,11 +370,9 @@
         });
 
         box4();
-
-        window.onresize = function(event) {
+        window.onresize = function() {
             box4();
         };
-
         function box4() {
             if($(window).width() < 768) {
                 console.log('<768');
