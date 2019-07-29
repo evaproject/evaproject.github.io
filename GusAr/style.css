@@ -7,6 +7,10 @@
     src: url('assets/fonts/HouschkaPro-Light.otf') format('opentype');
 }
 
+body {
+    opacity: 0;
+}
+
 .vh-parent {
     height: inherit !important;
 }
