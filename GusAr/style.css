@@ -26,12 +26,26 @@ h2 {
     font-family: "Houshka-Bold", serif;
 }
 
+.swiper-button-next {
+    /*ff762a - цвет*/
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ff762a'%2F%3E%3C%2Fsvg%3E") !important;
+}
+.swiper-button-prev {
+    /*ff762a - цвет*/
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ff762a'%2F%3E%3C%2Fsvg%3E") !important;
+}
+
 .box-1 {
     /*background-color: #e27734;*/
     /*height: 300px;*/
     background-color: rgb(255,118,42);
+    /*padding: 0 0;*/
     padding: 40px 0;
 }
+
+/*.box-1-contacts-left {*/
+/*    margin: 40px 0;*/
+/*}*/
 
 .box-1-contacts-left span {
     width: 100%;
@@ -55,6 +69,7 @@ h2 {
 }
 
 .box-1-contacts-right {
+    /*margin: 40px 0;*/
     /*text-align: right;*/
     /*padding-bottom: 20px;*/
 }
@@ -113,25 +128,64 @@ h2 {
     width: auto;
 }
 
-.box-2 {
-    /*height: 25vh;*/
-    /*text-align: center;*/
-
-}
-
 .box-2-logo {
-    height: 120px;
+    height:120px;
 }
-.box-2-logo img {
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
-    width: 200px;
+
+.logo-wrapper {
     position: relative;
-    top: -170%;
+    bottom: 197.45px;
+    width: 200px;
+    height: 317.45px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.box-2-logo img {
+    width: 200px;
+    left: 0;
+    right:0;
+    position: absolute;
+}
+
+.logo-bot-bg {
+    z-index: 100;
+    bottom: 0;
+}
+
+.logo-bot-border {
+    z-index: 102;
+    bottom: 0;
+}
+
+.logo-gus-wrapper {
+    width: 200px;
+    height: 317.45px;
+    overflow: hidden;
+    -moz-border-radius-bottomleft: 145px;
+    border-bottom-left-radius: 145px;
+    -webkit-border-bottom-right-radius: 145px;
+    border-bottom-right-radius: 145px;
+    position: absolute;
+    bottom: 2px;
+    z-index: 101;
+}
+
+.logo-gus {
+    bottom: 1px;
+}
+
+.logo-top {
+    bottom: 123.75px;
+    z-index: 100;
 }
 
 .box-3 {
     /*height: 80vh;*/
+    color: white;
+    position: relative;
+    /*width: 100vw;*/
+    /*overflow: hidden;*/
 }
 
 .bg-title-1 {
@@ -209,7 +263,7 @@ h2 {
     width: .8rem;
     height: .8rem;
     border-radius: 50%;
-    background: #232323;
+    background: white;
     content: "";
     left: 0;
     transition: .3s ease-in-out;
@@ -234,8 +288,51 @@ h2 {
     top: 1.6rem;
 }
 
+.bg-wrapper {
+    background-color: #232323;
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    margin-left: -15px
+}
+.bg-video {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /*z-index: -100;*/
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+    transform: scale(1.05);
+    min-height: 100%;
+    min-width: 100%;
+    height: auto;
+    width: auto;
+}
+
 .box-4 {
+    background-color: #232323;
+    position: relative;
+}
+.box-4-wrapper{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.box-4-wrapper-left {
     background-color: rgb(255,118,42);
+    height: 100%;
+    /*top: 10px;*/
+    /*bottom: 10px;*/
+}
+
+.box-4-wrapper-right {
+    background-color: rgb(255,118,42);
+    height: 100%;
 }
 
 .box-4 dt {
@@ -243,48 +340,12 @@ h2 {
 }
 
 .box-5 {
-    height: 100vh;
-}
-
-.box-5-content-1-1 {
-    height: 50vh;
-    background-image: url("assets/img/ph1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.box-5-content-2-1 {
-    height: 50vh;
-    background-image: url("assets/img/ph2.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.box-5-content-3-1 {
-    height: 25vh;
-    background-image: url("assets/img/ph3.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.box-5-content-3-2 {
-    height: 25vh;
-    background-image: url("assets/img/ph4.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    height: 60vh;
+    background-color: #232323;
 }
 
 .box-6 {
     background-color: #232323;
-    /*height: 50vh;*/
-}
-
-.box-6 .row {
-    /*height: 25vh;*/
 }
 
 .partner {
@@ -294,32 +355,32 @@ h2 {
 }
 
 .partner-1 {
-    background-image: url("assets/img/1.png");
+    background-image: url("assets/img/partner/1.png");
     height: 2rem;
 }
 
 .partner-2 {
-    background-image: url("assets/img/2.png");
+    background-image: url("assets/img/partner/2.png");
     height: 2rem;
 }
 
 .partner-3 {
-    background-image: url("assets/img/3.png");
+    background-image: url("assets/img/partner/3.png");
     height: 3rem;
 }
 
 .partner-4 {
-    background-image: url("assets/img/4.png");
+    background-image: url("assets/img/partner/4.png");
     height: 6rem;
 }
 
 .partner-5 {
-    background-image: url("assets/img/5.png");
+    background-image: url("assets/img/partner/5.png");
     height: 5rem;
 }
 
 .partner-6 {
-    background-image: url("assets/img/6.png");
+    background-image: url("assets/img/partner/6.png");
     height: 5rem;
 }
 
@@ -337,11 +398,12 @@ h2 {
 }
 
 .box-8 {
-    min-height: 75vh;
-    background-image: url("assets/img/ph5.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-color: #232323;
+}
+
+.box-8 iframe {
+    width: 100%;
+    height: 25vh;
 }
 
 .box-9 {
@@ -360,32 +422,32 @@ h2 {
 }
 
 .partner-7 {
-    background-image: url("assets/img/7.png");
+    background-image: url("assets/img/partner/7.png");
     height: 5rem;
 }
 
 .partner-8 {
-    background-image: url("assets/img/8.png");
+    background-image: url("assets/img/partner/8.png");
     height: 3.2rem;
 }
 
 .partner-9 {
-    background-image: url("assets/img/9.png");
+    background-image: url("assets/img/partner/9.png");
     height: 3.7rem;
 }
 
 .partner-10 {
-    background-image: url("assets/img/10.png");
+    background-image: url("assets/img/partner/10.png");
     height: 3rem;
 }
 
 .partner-11 {
-    background-image: url("assets/img/11.png");
+    background-image: url("assets/img/partner/11.png");
     height: 3.3rem;
 }
 
 .partner-12 {
-    background-image: url("assets/img/12.png");
+    background-image: url("assets/img/partner/12.png");
     height: 3rem;
 }
 
@@ -404,27 +466,27 @@ h2 {
 }
 
 .partner-13 {
-    background-image: url("assets/img/13.png");
+    background-image: url("assets/img/partner/13.png");
     height: 4rem;
 }
 
 .partner-14 {
-    background-image: url("assets/img/14.png");
+    background-image: url("assets/img/partner/14.png");
     height: 1.8rem;
 }
 
 .partner-15 {
-    background-image: url("assets/img/15.png");
+    background-image: url("assets/img/partner/15.png");
     height: 4rem;
 }
 
 .partner-16 {
-    background-image: url("assets/img/16.png");
+    background-image: url("assets/img/partner/16.png");
     height: 6.5rem;
 }
 
 .partner-17 {
-    background-image: url("assets/img/17.png");
+    background-image: url("assets/img/partner/17.png");
     height: 7rem;
 }
 
@@ -433,6 +495,8 @@ h2 {
     text-transform: uppercase;
     font-family: "Houshka-Bold", serif;
     font-size: 1.5rem;
+    color: white;
+    background-color: rgb(255,118,42);
 }
 .box-11-wrapper{
     min-height: 20vh;
@@ -440,7 +504,7 @@ h2 {
 
 .box-12 {
     min-height: 80vh;
-    background-image: url("assets/img/ph6.jpg");
+    background-image: url("assets/img/slider/car-ph15.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -461,41 +525,149 @@ h2 {
 }
 
 .partner-18 {
-    background-image: url("assets/img/18.png");
+    background-image: url("assets/img/partner/18.png");
     height: 7rem;
 }
 
 .partner-19 {
-    background-image: url("assets/img/19.png");
+    background-image: url("assets/img/partner/19.png");
     height: 7rem;
 }
 
 .partner-20 {
-    background-image: url("assets/img/20.png");
+    background-image: url("assets/img/partner/20.png");
     height: 12rem;
 }
 
 .partner-21 {
-    background-image: url("assets/img/21.png");
+    background-image: url("assets/img/partner/21.png");
     height: 6rem;
 }
 
 .partner-22 {
-    background-image: url("assets/img/22.png");
+    background-image: url("assets/img/partner/22.png");
     height: 5rem;
 }
 
 .partner-23 {
-    background-image: url("assets/img/23.png");
+    background-image: url("assets/img/partner/23.png");
     height: 3.7rem;
 }
 
 .partner-24 {
-    background-image: url("assets/img/24.png");
+    background-image: url("assets/img/partner/24.png");
     height: 12rem;
 }
 
 .partner-25 {
-    background-image: url("assets/img/25.png");
+    background-image: url("assets/img/partner/25.png");
     height: 4rem;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #232323;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.swiper-slide-next{
+    opacity: .2;
+}
+.swiper-slide-prev{
+    opacity: .2;
+}
+
+.sl-1 {
+    background-image: url("assets/img/slider/car-ph1.JPG");
+}
+
+.sl-2 {
+    background-image: url("assets/img/slider/car-ph2.JPG");
+}
+
+.sl-3 {
+    background-image: url("assets/img/slider/car-ph3.JPG");
+}
+
+.sl-4 {
+    background-image: url("assets/img/slider/car-ph4.JPG");
+}
+
+.sl-5 {
+    background-image: url("assets/img/slider/car-ph5.JPG");
+}
+
+.sl-6 {
+    background-image: url("assets/img/slider/car-ph6.JPG");
+}
+
+.sl-7 {
+    background-image: url("assets/img/slider/car-ph7.JPG");
+}
+
+.sl-8 {
+    background-image: url("assets/img/slider/car-ph8.JPG");
+}
+
+.sl-9 {
+    background-image: url("assets/img/slider/car-ph9.JPG");
+}
+
+.sl-10 {
+    background-image: url("assets/img/slider/car-ph10.JPG");
+}
+
+.sl-11 {
+    background-image: url("assets/img/slider/car-ph11.JPG");
+}
+
+.sl-12 {
+    background-image: url("assets/img/slider/car-ph12.JPG");
+}
+
+.sl-13 {
+    background-image: url("assets/img/slider/car-ph13.JPG");
+}
+
+.sl-14 {
+    background-image: url("assets/img/slider/car-ph14.JPG");
+}
+
+.sl-15 {
+    background-image: url("assets/img/slider/car-ph15.JPG");
+}
+
+.sl-16 {
+    background-image: url("assets/img/slider/car-ph16.JPG");
+}
+
+.sl-17 {
+    background-image: url("assets/img/slider/car-ph17.JPG");
+}
+
+.sl-18 {
+    background-image: url("assets/img/slider/car-ph18.JPG");
+}
+
+.sl-19 {
+    background-image: url("assets/img/slider/car-ph19.JPG");
 }

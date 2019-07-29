@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
 </head>
 <body>
     <section class="container-fluid box-1">
@@ -42,90 +43,112 @@
         </div>
     </section>
 
-    <section class="container box-3 mb-4">
-        <div class="row">
+    <section class="container-fluid box-3 pb-4">
+        <div class="bg-wrapper">
+            <video loop="loop" preload="auto" muted width="100%" height="auto" class="bg-video wow fadeIn" data-wow-delay="2.5s">
+                <source class="h-100" src="assets/video/bg-video.mp4">
+            </video>
+        </div>
 
-            <div class="col-12 box-2">
-                <div class="box-2-logo text-right text-md-center">
-                    <img src="assets/img/logo.png">
-                </div>
-                <h1 class="box-2-text text-md-center bold wow fadeIn" data-wow-duration="1.8s">
-                    ГУСАР PRODUCTION
-                </h1>
-            </div>
+        <div class="container">
+            <div class="row">
 
-            <div class="col-12 col-md-7">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col box-3-content-left-upper align-self-center wow fadeInUp" data-wow-delay=".2s">
-                            <div class="row bg-title-1 title-1">
-                                <h2 class="col-auto align-self-center bold m-0">КТО МЫ</h2>
+                <div class="col-12 box-2">
+                    <div class="box-2-logo text-right text-md-center">
+                        <div class="logo-wrapper">
+
+                            <img class="logo-bot-bg" src="assets/img/logo-bot-bg.png">
+                            <img class="logo-bot-border" src="assets/img/logo-bot-border.png">
+                            <div class="logo-gus-wrapper">
+                                <img class="logo-gus wow slideInUp" data-wow-duration="2.5s" src="assets/img/logo-gus-1.png">
                             </div>
-                            <div class="py-4">
-                                <div>
-                                    ГусАр production – команда<br>
-                                    профессионалов, живущая организацией<br>
-                                    крупных концертов, корпоративных<br>
-                                    мероприятий и частных событий.
+                            <img class="logo-top" src="assets/img/logo-top.png">
+
+                        </div>
+                    </div>
+                    <h1 class="box-2-text text-md-center bold wow fadeIn my-4" data-wow-duration="1.8s" data-wow-delay="1.5s">
+                        ГУСАР PRODUCTION
+                    </h1>
+                </div>
+
+                <div class="col-12 col-md-7">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col box-3-content-left-upper align-self-center wow fadeInUp" data-wow-delay="2.2s">
+                                <div class="row bg-title-1 title-1">
+                                    <h2 class="col-auto align-self-center bold m-0">КТО МЫ</h2>
                                 </div>
                                 <div class="py-4">
-                                    Нас вдохновляют самые сложные задачи<br>
-                                    и нестандартные идеи.
+                                    <div>
+                                        ГусАр production – команда<br>
+                                        профессионалов, живущая организацией<br>
+                                        крупных концертов, корпоративных<br>
+                                        мероприятий и частных событий.
+                                    </div>
+                                    <div class="py-4">
+                                        Нас вдохновляют самые сложные задачи<br>
+                                        и нестандартные идеи.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-sm-6 box-3-content-left-bottom-left wow fadeInUp" data-wow-delay="2.3s">
+                                <div class="row bg-title-1 title-2">
+                                    <h2 class="col-auto align-self-center bold m-0">> 200</h2>
+                                </div>
+                                <div class="py-4">
+                                    мероприятий<br>
+                                    мы провели<br>
+                                    в 2017 году
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 box-3-content-left-bottom-right wow fadeInUp" data-wow-delay="2.4s">
+                                <div class="row bg-title-1 title-3">
+                                    <h2 class="col-auto align-self-center bold m-0">> 200 000</h2>
+                                </div>
+                                <div class="py-4">
+                                    человек<br>
+                                    посетило<br>
+                                    наши мероприятия
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-12 col-sm-6 box-3-content-left-bottom-left wow fadeInUp" data-wow-delay=".3s">
-                            <div class="row bg-title-1 title-2">
-                                <h2 class="col-auto align-self-center bold m-0">> 200</h2>
-                            </div>
-                            <div class="py-4">
-                                мероприятий<br>
-                                мы провели<br>
-                                в 2017 году
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 box-3-content-left-bottom-right wow fadeInUp" data-wow-delay=".4s">
-                            <div class="row bg-title-1 title-3">
-                                <h2 class="col-auto align-self-center bold m-0">> 200 000</h2>
-                            </div>
-                            <div class="py-4">
-                                посетителей <br>
-                                пришло<br>
-                                на каждое из них
-                            </div>
-                        </div>
+                </div>
+                <div class="col-12 col-md-5 box-3-content-right wow fadeInUp" data-wow-delay="2.5s">
+                    <div class="row bg-title-2 title-4">
+                        <h2 class="col-auto align-self-center bold m-0">НАШИ УСЛУГИ</h2>
                     </div>
+                    <div class="py-4">
+                        Мы отвечаем за организацию<br>
+                        и техническому обеспечения<br>
+                        мероприятий:
+                    </div>
+                    <ul class="list">
+                        <li>Разработка концепции</li>
+                        <li>Подбор площадки</li>
+                        <li>Проработка ТЗ</li>
+                        <li>Дизайн сценических и<br>околосценических пространств</li>
+                        <li>Согласование райдеров</li>
+                        <li>Подбор подрядчиков</li>
+                        <li>Составление смет</li>
+                        <li>Контроль подготовки<br>и работы всех служб</li>
+                    </ul>
                 </div>
-            </div>
-            <div class="col-12 col-md-5 box-3-content-right wow fadeInUp" data-wow-delay=".5s">
-                <div class="row bg-title-2 title-4">
-                    <h2 class="col-auto align-self-center bold m-0">НАШИ УСЛУГИ</h2>
-                </div>
-                <div class="py-4">
-                    Мы отвечаем за организацию<br>
-                    и техническому обеспечения<br>
-                    мероприятий:
-                </div>
-                <ul class="list">
-                    <li>Разработка концепции</li>
-                    <li>Подбор площадки</li>
-                    <li>Проработка ТЗ</li>
-                    <li>Дизайн сценических и<br>околосценических пространств</li>
-                    <li>Согласование райдеров</li>
-                    <li>Подбор подрядчиков</li>
-                    <li>Составление смет</li>
-                    <li>Контроль подготовки<br>и работы всех служб</li>
-                </ul>
             </div>
         </div>
     </section>
 
     <section class="container-fluid box-4">
+        <div class="row box-4-wrapper">
+            <div class="col-12 col-md-6 box-4-wrapper-left wow slideInLeft"></div>
+            <div class="col-12 col-md-6 box-4-wrapper-right wow slideInRight"></div>
+        </div>
+
         <div class="container pt-5 pb-5">
             <div class="row">
-                <div class="col-12 col-md-6 box-4-content-left">
+                <div class="col-12 col-md-6 box-4-content-left wow slideInLeft" data-wow-delay=".2s">
                     <dl>
                         <dt>Фестивали:</dt>
                         <dd>Нашествие, Park Live, Плесский анимационный фестиваль, Пиратская Станция, Рок Фест;</dd>
@@ -135,7 +158,7 @@
                         <dd>Adrenaline Open Cyber Cup</dd>
                     </dl>
                 </div>
-                <div class="col-12 col-md-6 box-4-content-right">
+                <div class="col-12 col-md-6 box-4-content-right wow slideInRight" data-wow-delay=".2s">
                     <dl>
                         <dt>Концерты:</dt>
                         <dd>Дима Билан, Стас Михайлов, А-Студио,
@@ -153,23 +176,32 @@
             </div>
         </div>
     </section>
-
-    <section class="container-fluid box-5">
-        <div class="row">
-            <div class="col box-5-content-1-1"></div>
-        </div>
-        <div class="row">
-            <div class="col-7 box-5-content-2-1"></div>
-            <div class="col-5">
-                <div class="container p-0">
-                    <div class="row">
-                        <div class="col box-5-content-3-1"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col box-5-content-3-2"></div>
-                    </div>
-                </div>
+    <section class="container-fluid p-0 box-5">
+        <div class="swiper-container swiper-1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide sl-1"></div>
+                <div class="swiper-slide sl-2"></div>
+                <div class="swiper-slide sl-3"></div>
+                <div class="swiper-slide sl-4"></div>
+                <div class="swiper-slide sl-5"></div>
+                <div class="swiper-slide sl-6"></div>
+                <div class="swiper-slide sl-7"></div>
+                <div class="swiper-slide sl-8"></div>
+                <div class="swiper-slide sl-9"></div>
+                <div class="swiper-slide sl-10"></div>
+                <div class="swiper-slide sl-11"></div>
+                <div class="swiper-slide sl-12"></div>
+                <div class="swiper-slide sl-13"></div>
+                <div class="swiper-slide sl-14"></div>
+                <div class="swiper-slide sl-16"></div>
+                <div class="swiper-slide sl-17"></div>
+                <div class="swiper-slide sl-18"></div>
             </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-pagination-1"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next swiper-button-next-1"></div>
+            <div class="swiper-button-prev swiper-button-prev-1"></div>
         </div>
     </section>
     <section class="container-fluid box-6">
@@ -187,15 +219,77 @@
     <section class="container-fluid box-7">
         <div class="container">
             <div class="row align-items-center box-7-wrapper">
-                <div class="col-12 wow fadeInUp">
+                <div class="col-12 wow fadeInUp" data-wow-offset="150">
                     <p class="my-4">мы уверены: успех любого мероприятия<br>зависит от надежности партнеров</p>
                 </div>
             </div>
         </div>
     </section>
-    <section class="container-fluid box-8">
 
-    </section>
+
+<!--    <section class="container-fluid box-8">-->
+<!--        <div class="row">-->
+<!--            <div class="col-12 col-md-3 p-0">-->
+<!--                <iframe id="ytplayer" type="text/html"-->
+<!--                        src="https://www.youtube.com/embed/fnJ8sZFkuMw?autoplay=1&mute=1&controls=0&disablekb=1&loop=1&modestbranding=1&iv_load_policy=3&playlist=fnJ8sZFkuMw"-->
+<!--                        frameborder="0"-->
+<!--                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"-->
+<!--                        allowfullscreen>-->
+<!--                </iframe>-->
+<!--            </div>-->
+<!--            <div class="col-12 col-md-3 p-0">-->
+<!--                <iframe src="https://www.youtube.com/embed/PdB9KfmX50Y?autoplay=1&mute=1&controls=0&disablekb=1&loop=1&modestbranding=1&iv_load_policy=3&playlist=PdB9KfmX50Y"-->
+<!--                        frameborder="0"-->
+<!--                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"-->
+<!--                        allowfullscreen>-->
+<!--                </iframe>-->
+<!--            </div>-->
+<!--            <div class="col-12 col-md-3 p-0">-->
+<!--                <iframe src="https://www.youtube.com/embed/t9APohDmtKM?autoplay=1&mute=1&controls=0&disablekb=1&loop=1&modestbranding=1&iv_load_policy=3&playlist=t9APohDmtKM"-->
+<!--                        frameborder="0"-->
+<!--                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"-->
+<!--                        allowfullscreen>-->
+<!--                </iframe>-->
+<!--            </div>-->
+<!--            <div class="col-12 col-md-3 p-0">-->
+<!--                <iframe src="https://www.youtube.com/embed/0CglYoXywT8?autoplay=1&mute=1&controls=0&disablekb=1&loop=1&modestbranding=1&iv_load_policy=3&playlist=0CglYoXywT8"-->
+<!--                        frameborder="0"-->
+<!--                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"-->
+<!--                        allowfullscreen>-->
+<!--                </iframe>-->
+<!--            </div>-->
+<!--            <div class="col-12 col-md-3 p-0">-->
+<!--                <iframe src="https://www.youtube.com/embed/LRK8Sf4HgEE?autoplay=1&mute=1&controls=0&disablekb=1&loop=1&modestbranding=1&iv_load_policy=3&playlist=LRK8Sf4HgEE"-->
+<!--                        frameborder="0"-->
+<!--                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"-->
+<!--                        allowfullscreen>-->
+<!--                </iframe>-->
+<!--            </div>-->
+<!--            <div class="col-12 col-md-3 p-0">-->
+<!--                <iframe src="https://www.youtube.com/embed/YKN-sbW4Y8Q?autoplay=1&mute=1&controls=0&disablekb=1&loop=1&modestbranding=1&iv_load_policy=3&playlist=YKN-sbW4Y8Q"-->
+<!--                        frameborder="0"-->
+<!--                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"-->
+<!--                        allowfullscreen>-->
+<!--                </iframe>-->
+<!--            </div>-->
+<!--            <div class="col-12 col-md-3 p-0">-->
+<!--                <iframe src="https://www.youtube.com/embed/iuKpT40jZhM?autoplay=1&mute=1&controls=0&disablekb=1&loop=1&modestbranding=1&iv_load_policy=3&playlist=iuKpT40jZhM"-->
+<!--                        frameborder="0"-->
+<!--                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"-->
+<!--                        allowfullscreen>-->
+<!--                </iframe>-->
+<!--            </div>-->
+<!--            <div class="col-12 col-md-3 p-0">-->
+<!--                <iframe src="https://www.youtube.com/embed/Oz9quIeg6Uk?autoplay=1&mute=1&controls=0&disablekb=1&loop=1&modestbranding=1&iv_load_policy=3&playlist=Oz9quIeg6Uk"-->
+<!--                        frameborder="0"-->
+<!--                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"-->
+<!--                        allowfullscreen>-->
+<!--                </iframe>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+
+
     <section class="container-fluid box-9">
         <div class="container">
             <div class="row py-4 align-items-center">
@@ -222,8 +316,8 @@
     <section class="container-fluid box-11">
         <div class="container">
             <div class="row align-items-center box-11-wrapper">
-                <div class="col-12 wow fadeInUp">
-                    <p class="my-4">наш девиз: не просто оправдать ожидания клиентов,<br>а превзойти их!</p>
+                <div class="col-12 wow fadeInUp" data-wow-offset="150">
+                    <p class="my-4">наш девиз: не просто оправдать ожидания клиентов, а превзойти их!</p>
                 </div>
             </div>
         </div>
@@ -234,23 +328,50 @@
     <section class="container-fluid box-13">
         <div class="container">
             <div class="row pt-4 align-items-center justify-content-center">
-                <div class="col-12 col-md-4 my-5 partner partner-18"></div>
-                <div class="col-12 col-md-4 my-5 partner partner-19"></div>
-                <div class="col-12"></div>
-                <div class="col-12 col-md-4 my-5 partner partner-20"></div>
-                <div class="col-12 col-md-4 my-5 partner partner-21"></div>
-                <div class="col-12 col-md-4 my-5 partner partner-22"></div>
-                <div class="col-12 col-md-4 my-5 partner partner-23"></div>
-                <div class="col-12 col-md-4 my-5 partner partner-24"></div>
-                <div class="col-12 col-md-4 my-5 partner partner-25"></div>
+                <div class="col-12 col-md-3 my-5 partner partner-18"></div>
+                <div class="col-12 col-md-3 my-5 partner partner-19"></div>
+                <div class="col-12 col-md-3 my-5 partner partner-20"></div>
+                <div class="col-12 col-md-3 my-5 partner partner-21"></div>
+                <div class="col-12 col-md-3 my-5 partner partner-22"></div>
+                <div class="col-12 col-md-3 my-5 partner partner-23"></div>
+                <div class="col-12 col-md-3 my-5 partner partner-24"></div>
+                <div class="col-12 col-md-3 my-5 partner partner-25"></div>
             </div>
         </div>
     </section>
     <script src="assets/js/jquery-3.4.1.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/swipe.min.js"></script>
     <script>
+        swipeMin();
         new WOW().init();
+
+        var video = document.getElementsByClassName("bg-video");
+        video[0].addEventListener("canplay", function() {
+            setTimeout(function() {
+            video[0].play();
+        }, 2500);
+        });
+
+        box4()
+
+        window.onresize = function(event) {
+            box4()
+        };
+
+        function box4() {
+            if($(window).width() < 768) {
+                console.log('<768')
+                $(".box-4-wrapper-left").css("height", '50%')
+                $(".box-4-wrapper-right").css("height", '50%')
+            } else {
+                $(".box-4-wrapper-left").css("height", '100%')
+                $(".box-4-wrapper-right").css("height", '100%')
+            }
+        }
+
     </script>
 </body>
 </html>
