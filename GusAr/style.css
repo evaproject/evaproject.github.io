@@ -7,15 +7,12 @@
     src: url('assets/fonts/HouschkaPro-Light.otf') format('opentype');
 }
 
-body {
-    opacity: 0;
-}
-
 .vh-parent {
     height: inherit !important;
 }
 
 body {
+    opacity: 0;
     font-family: "Houshka-Light", serif;
     font-size: 1.2rem;
     color: #232323;
@@ -37,6 +34,15 @@ h2 {
 .swiper-button-prev {
     /*ff762a - цвет*/
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ff762a'%2F%3E%3C%2Fsvg%3E") !important;
+}
+.swiper-pagination-bullet-active {
+    background-color: rgb(255,118,42) !important;
+}
+
+.box-text{
+    background-color:  #232323;
+    text-transform: uppercase;
+    color: white;
 }
 
 .box-1 {
@@ -80,8 +86,8 @@ h2 {
 
 .social-box{
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     margin-left: .2rem;
 }
 
@@ -90,21 +96,22 @@ h2 {
 }
 
 .social-f{
-    background-image: url("assets/img/fb.png");
+    background-image: url("assets/img/fb.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .social-i{
-    background-image: url("assets/img/inst.png");
+    background-image: url("assets/img/inst.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    margin-left: 0 !important;
 }
 
 .social-m{
-    background-image: url("assets/img/mail.png");
+    background-image: url("assets/img/mail.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -128,8 +135,14 @@ h2 {
     margin: 20px 0;
     text-transform: uppercase;
     background-color: #232323;
-    color: white;
     width: auto;
+}
+.box-1-contacts-right-hashtag a{
+    color: white;
+}
+.box-1-contacts-right-hashtag a:hover{
+    color: lightgray;
+    text-decoration: none;
 }
 
 .box-2-logo {
@@ -294,11 +307,11 @@ h2 {
 
 .bg-wrapper {
     background-color: #232323;
-    width: 100vw;
+    width: 100%;
     height: 100%;
     overflow: hidden;
     position: absolute;
-    margin-left: -15px
+    margin-left: -15px;
 }
 .bg-video {
     position: absolute;
@@ -306,6 +319,7 @@ h2 {
     right: 0;
     bottom: 0;
     left: 0;
+
     /*z-index: -100;*/
     -webkit-filter: blur(10px);
     filter: blur(10px);
@@ -317,25 +331,30 @@ h2 {
 }
 
 .box-4 {
-    background-color: #232323;
+    /*background-color: #232323;*/
+    background-color: rgb(255,118,42);
     position: relative;
+    color: white;
 }
 .box-4-wrapper{
     position: absolute;
-    left: 0;
-    right: 0;
+    width: 100%;
+    /*left: 0;*/
+    /*right: 0;*/
     top: 0;
     bottom: 0;
 }
 .box-4-wrapper-left {
-    background-color: rgb(255,118,42);
+    /*background-color: rgb(255,118,42);*/
+    background-color: #232323;
     height: 100%;
     /*top: 10px;*/
     /*bottom: 10px;*/
 }
 
 .box-4-wrapper-right {
-    background-color: rgb(255,118,42);
+    /*background-color: rgb(255,118,42);*/
+    background-color: #232323;
     height: 100%;
 }
 
@@ -360,7 +379,7 @@ h2 {
 
 .partner-1 {
     background-image: url("assets/img/partner/1.png");
-    height: 2rem;
+    height: 4.5rem;
 }
 
 .partner-2 {
@@ -375,7 +394,7 @@ h2 {
 
 .partner-4 {
     background-image: url("assets/img/partner/4.png");
-    height: 6rem;
+    height: 5rem;
 }
 
 .partner-5 {
@@ -384,8 +403,13 @@ h2 {
 }
 
 .partner-6 {
-    background-image: url("assets/img/partner/6.png");
-    height: 5rem;
+    text-align: center;
+    /*height: 60px;*/
+    /*width: 100px;*/
+}
+.partner-6 svg{
+    height: 80px;
+    width: 133.333333px;
 }
 
 .box-7 {
@@ -403,11 +427,41 @@ h2 {
 
 .box-8 {
     background-color: #232323;
+    font-size: 0;
 }
 
-.box-8 iframe {
-    width: 100%;
-    height: 25vh;
+.youtube {
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    transition: all 200ms ease-out;
+    cursor: pointer;
+}
+
+.youtube-main {
+    background-size: auto 180% !important;
+}
+
+.youtube .play {
+    background: url('assets/img/gusar-play-btn.png') no-repeat; /*ВАЖНО: здесь укажите адрес до изображения*/
+    background-position: 0 -50px;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    position: absolute;
+    height: 50px;
+    width: 69px;
+    transition: none;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+}
+
+.youtube:hover .play {
+    background-position: 0 0;
 }
 
 .box-9 {
@@ -432,12 +486,12 @@ h2 {
 
 .partner-8 {
     background-image: url("assets/img/partner/8.png");
-    height: 3.2rem;
+    height: 3rem;
 }
 
 .partner-9 {
     background-image: url("assets/img/partner/9.png");
-    height: 3.7rem;
+    height: 3rem;
 }
 
 .partner-10 {
@@ -447,7 +501,7 @@ h2 {
 
 .partner-11 {
     background-image: url("assets/img/partner/11.png");
-    height: 3.3rem;
+    height: 3rem;
 }
 
 .partner-12 {
@@ -471,27 +525,27 @@ h2 {
 
 .partner-13 {
     background-image: url("assets/img/partner/13.png");
-    height: 4rem;
+    height: 3rem;
 }
 
 .partner-14 {
     background-image: url("assets/img/partner/14.png");
-    height: 1.8rem;
+    height: 1.5rem;
 }
 
 .partner-15 {
     background-image: url("assets/img/partner/15.png");
-    height: 4rem;
+    height: 5rem;
 }
 
 .partner-16 {
     background-image: url("assets/img/partner/16.png");
-    height: 6.5rem;
+    height: 5rem;
 }
 
 .partner-17 {
     background-image: url("assets/img/partner/17.png");
-    height: 7rem;
+    height: 5rem;
 }
 
 .box-11 {
@@ -508,7 +562,7 @@ h2 {
 
 .box-12 {
     min-height: 80vh;
-    background-image: url("assets/img/slider/car-ph15.jpg");
+    background-image: url("assets/img/slider/box-12-bg.JPG");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -530,22 +584,22 @@ h2 {
 
 .partner-18 {
     background-image: url("assets/img/partner/18.png");
-    height: 7rem;
+    height: 5rem;
 }
 
 .partner-19 {
     background-image: url("assets/img/partner/19.png");
-    height: 7rem;
+    height: 5rem;
 }
 
 .partner-20 {
     background-image: url("assets/img/partner/20.png");
-    height: 12rem;
+    height: 3rem;
 }
 
 .partner-21 {
     background-image: url("assets/img/partner/21.png");
-    height: 6rem;
+    height: 5rem;
 }
 
 .partner-22 {
@@ -555,27 +609,76 @@ h2 {
 
 .partner-23 {
     background-image: url("assets/img/partner/23.png");
-    height: 3.7rem;
+    height: 3rem;
 }
 
 .partner-24 {
     background-image: url("assets/img/partner/24.png");
-    height: 12rem;
+    height: 3rem;
 }
 
 .partner-25 {
     background-image: url("assets/img/partner/25.png");
+    height: 5rem;
+}
+
+.box-14 {
+    background-color: #232323;
+    color: white;
+    overflow: hidden;
+
+}
+
+.box-14 iframe {
+    size: auto;
+}
+
+.box-14 button {
+    width: 20rem;
     height: 4rem;
+    background-image: url("assets/img/bgTitle1.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: white;
+}
+
+.footer-link {
+    color: white;
+}
+
+.footer-hashtag{
+    background-color: rgb(255,118,42) !important;
+    color: #232323;
+}
+.footer-hashtag a{
+    color: #232323;
+}
+.footer-hashtag:hover a{
+    color: #464646;
+}
+
+.footer-link:hover {
+    color: rgb(255,118,42);
+    text-decoration: none;
+}
+
+.footer-map {
+    border-radius: 4px;
+}
+
+.box-15 {
+    height: 720px;
+    background-color: #232323;
 }
 
 .swiper-container {
     width: 100%;
     height: 100%;
 }
+
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #232323;
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
@@ -590,7 +693,7 @@ h2 {
     -webkit-align-items: center;
     align-items: center;
     background-size: cover;
-    background-repeat: no-repeat;
+    background: #232323 no-repeat center;
 }
 
 .swiper-slide-next{
@@ -653,7 +756,8 @@ h2 {
 }
 
 .sl-14 {
-    background-image: url("assets/img/slider/car-ph14.JPG");
+    background-image: url("assets/img/slider/car-ph14.jpeg");
+    /*background-image: url("assets/img/slider/car-ph14.JPG");*/
 }
 
 .sl-15 {
@@ -674,4 +778,73 @@ h2 {
 
 .sl-19 {
     background-image: url("assets/img/slider/car-ph19.JPG");
+}
+
+.more-info-wrapper {
+    background-color: #232323;
+}
+
+/* Chrome, Opera, Safari */
+details summary::-webkit-details-marker {
+    display: none;
+}
+/* Firefox */
+details, summary {
+    display: block;
+}
+details{
+    transition: all 5s;
+    max-height: 150px;
+}
+details[open]{
+    max-height: 8000px;
+}
+.more-info-details {
+    color: white;
+    /*font-size: 1.5rem;*/
+}
+
+summary{
+    outline: none;
+    transition: all .6s;
+}
+summary:hover{
+    background-color: rgba(255,118,42, .5);
+}
+summary:before{
+    content: url("assets/img/arrow0.svg");
+    padding-right: 15px;
+}
+[open] > summary:before {
+    content: url("assets/img/arrow.svg");
+    padding-right: 15px;
+}
+
+.details-open{
+    background-color: rgb(255,118,42) !important;
+}
+
+.details-open-sub{
+    background-color: rgba(255,118,42, .5);
+}
+
+
+.more-info-ul{
+    margin-left: 0;
+    padding-left: 0;
+}
+.more-info-ul li{
+    position: relative;
+    list-style-type: none;
+    margin:16px 0 16px 25px;
+
+}
+.more-info-ul span {
+    font-family: "Houshka-Bold", serif;
+    position: absolute;
+    left: -.9rem;
+    top: -.8rem;
+    color: rgba(255,118,42,.5);
+    font-size: 2.5rem;
+    /*font-style: italic;*/
 }
