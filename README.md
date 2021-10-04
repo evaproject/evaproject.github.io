@@ -13,6 +13,12 @@
 <br/>
 <a target="_blank" href="https://evaproject.github.io/NOVA/">  🕹 Запустить </a>
 
-### WebNotes
-<a target="_blank" href="https://github.com/evaproject/evaproject.github.io/tree/master/webNotes"> 📄 Репозиторий </a>
+### Sirius mini landing
+<a target="_blank" href="https://github.com/evaproject/evaproject.github.io/tree/master/sirius"> 📄 Репозиторий </a>
+<br/>
+<a target="_blank" href="https://evaproject.github.io/sirius/">  🕹 Запустить </a>
 
+### GusAr landing
+<a target="_blank" href="https://github.com/evaproject/evaproject.github.io/tree/master/GusAr"> 📄 Репозиторий </a>
+<br/>
+<a target="_blank" href="https://evaproject.github.io/GusAr/">  🕹 Запустить </a>
