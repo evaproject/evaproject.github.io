@@ -1,3 +1,5 @@
+### evaproject.github.io
+
 ### Реализация кривой Безье
 <a target="_blank" href="https://github.com/evaproject/evaproject.github.io/tree/master/bezier"> 📄 Репозиторий </a>
 <br/>
